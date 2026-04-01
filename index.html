@@ -89,6 +89,9 @@ async function loadRecettes() {
   try {
     const res = await fetch('recettes.json');
     recettes = await res.json();
+    
+    console.log(recettes); // 👈 AJOUTE CETTE LIGNE
+    
     populateAuthors();
     render();
   } catch(e) {

@@ -27,7 +27,7 @@
     "prix": 30000,
     "ingredients": ["5 oeufs", "1L lait", "500g farine", "beurre", "sucre"],
     "ustensiles": ["poêle", "fouet électrique","grand saladier"],
-    "tags": [],
+    "tags": ["gouter"],
     "etapes": [
       "Farine+sel+sucre",
       "Ajouter oeufs puis beurre",
@@ -56,12 +56,17 @@
     "duree": 30,
     "personnes": 2,
     "prix": 20,
-    "ingredients": ["lentilles corail", "lait de coco", "épinard","riz","curry en poudre","curcuma","paprika","ail","oignon"],
-    "ustensiles": ["mixeur", "bol"],
+    "ingredients": ["lentilles corail", "lait de coco", "épinard","riz","curry en poudre","curcuma","paprika","ail","oignon","concentré de tomate"],
+    "ustensiles": ["casserole", "poele"],
     "tags": [],
     "etapes": [
-      "Mixer ensemble",
-      "Sel+poivre+huile d'olive"
+      "faire cuire le riz",
+      "cuire oignongue et ail",
+      "ajouter les lentilles avec de l'eau",
+      "ajouter les épices et concentré de tomate",
+      "ajouter le lait de coco",
+      "ajouter les épinard et les faire fondre pas longtemps",
+      "ajouter les noix de cajou en option"
     ]
   }
 ]

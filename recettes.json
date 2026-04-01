@@ -76,7 +76,7 @@
     "duree": 60,
     "personnes": 2,
     "prix": 8,
-    "ingredients": ["patate", "carotte"]
+    "ingredients": ["patate", "carotte"],
     "ustensiles": ["four"],
     "tags": [],
     "etapes": [

@@ -4,7 +4,7 @@
     "titre": "Risotto aux champignons",
     "auteur": "T&T",
     "duree": 120,
-    "personnes": 2,
+    "personnes": 6,
     "prix": 30,
     "ingredients": ["riz risotto", "champignons", "parmesan", "oignon", "vin blanc", "bouillon"],
     "ustensiles": ["casserole", "louche"],

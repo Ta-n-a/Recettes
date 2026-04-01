@@ -8,7 +8,7 @@
     "prix": 30,
     "ingredients": ["riz risotto", "champignons", "parmesan", "oignon", "vin blanc", "bouillon"],
     "ustensiles": ["casserole", "louche"],
-    "tags": ["végétarien", "réconfortant"],
+    "tags": [],
     "etapes": [
       "Faire revenir l'oignon dans du beurre.",
       "Ajouter le riz et nacrer 2 min.",
@@ -22,9 +22,11 @@
     "titre": "Crêpes",
     "auteur": "Tristan",
     "duree": 10,
+    "personnes": 2,
+    "prix": 30,
     "ingredients": ["oeufs", "chèvre", "ciboulette", "persil", "beurre"],
     "ustensiles": ["poêle", "fouet"],
-    "tags": ["rapide", "végétarien"],
+    "tags": [],
     "etapes": [
       "Battre les oeufs avec les herbes.",
       "Faire fondre le beurre dans la poêle.",

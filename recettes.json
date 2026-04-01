@@ -4,34 +4,51 @@
     "titre": "Risotto aux champignons",
     "auteur": "T&T",
     "duree": 120,
-    "personnes": 6,
-    "prix": 30,
-    "ingredients": ["riz risotto", "champignons", "parmesan", "oignon", "vin blanc", "bouillon"],
-    "ustensiles": ["casserole", "louche"],
+    "personnes": 2,
+    "prix": 3000,
+    "ingredients": ["riz risotto", "600g champignons", "parmesan", "échalotte", "vin blanc", "bouillon cube"],
+    "ustensiles": ["poêle"],
     "tags": [],
     "etapes": [
-      "Faire revenir l'oignon dans du beurre.",
-      "Ajouter le riz et nacrer 2 min.",
-      "Déglacer au vin blanc.",
-      "Ajouter le bouillon louche par louche.",
-      "Incorporer champignons et parmesan."
+      "Cuire champignons et réserver",
+      "Faire revenir l'échalotte dans huile",
+      "Ajouter riz et vin blanc",
+      "Verser le bouillon louche par louche..",
+      "Incorporer champignons et parmesan.",
+      "sel poivre",
     ]
   },
   {
     "id": 2,
     "titre": "Crêpes",
     "auteur": "Tristan",
-    "duree": 10,
-    "personnes": 2,
-    "prix": 30,
-    "ingredients": ["oeufs", "chèvre", "ciboulette", "persil", "beurre"],
-    "ustensiles": ["poêle", "fouet"],
-    "tags": [],
+    "duree": 100,
+    "personnes": 4,
+    "prix": 30000,
+    "ingredients": ["5 oeufs", "1L lait", "500g farine", "beurre", "sucre"],
+    "ustensiles": ["poêle", "fouet électrique","grand saladier"],
+    "tags": [gouter],
     "etapes": [
       "Battre les oeufs avec les herbes.",
       "Faire fondre le beurre dans la poêle.",
       "Verser les oeufs, remuer doucement.",
       "Déposer le chèvre avant de plier."
+    ]
+  }
+  
+  {
+    "id": 3,
+    "titre": "Betterave feta",
+    "auteur": "Tatiana",
+    "duree": 5,
+    "personnes": 2,
+    "prix": 5,
+    "ingredients": ["1 betterave", "1 feta", "pain"],
+    "ustensiles": ["mixeur", "bol"],
+    "tags": [],
+    "etapes": [
+      "Mixer ensemble",
+      "Sel+poivre+huile d'olive"
     ]
   }
 ]

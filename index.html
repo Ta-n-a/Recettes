@@ -127,9 +127,12 @@ function render() {
   grid.innerHTML = filtered.map(r => `
     <div class="card" onclick="openModal(${r.id})">
       <div class="card-top">
-        <span class="card-title">${r.titre}</span>
-        <span class="badge-time">${r.duree} min</span>
-      </div>
+  <span class="card-title">${r.titre}</span>
+  <span class="badge-time">${r.duree} min</span>
+</div>
+<div style="font-size:0.8rem; color:#666; margin-bottom:6px;">
+  👥 ${r.personnes} pers · 💰 ${r.prix}€
+</div>
       <div class="card-author">par ${r.auteur}</div>
       <div class="tags">${r.tags.map(t => `<span class="tag">${t}</span>`).join('')}</div>
       <div class="ingr-preview">${r.ingredients.slice(0, 4).join(', ')}${r.ingredients.length > 4 ? '…' : ''}</div>
@@ -142,7 +145,10 @@ function openModal(id) {
   document.getElementById('modal').innerHTML = `
     <button class="modal-close" onclick="closeModal()">fermer</button>
     <h2>${r.titre}</h2>
-    <div class="modal-meta">par ${r.auteur} · ${r.duree} min · ${r.tags.join(', ')}</div>
+    <div class="modal-meta">
+  par ${r.auteur} · ⏱️ ${r.duree} min · 👥 ${r.personnes} pers · 💰 ${r.prix}€<br>
+  ${r.tags.join(', ')}
+</div>
     <div class="section-label">Ingrédients</div>
     <ul>${r.ingredients.map(i => `<li>${i}</li>`).join('')}</ul>
     <div class="section-label">Ustensiles</div>

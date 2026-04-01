@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nos recettes</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: system-ui, sans-serif; background: #f5f4f0; color: #1a1a1a; min-height: 100vh; }
+    header { background: #fff; border-bottom: 1px solid #e5e3dc; padding: 1.25rem 1.5rem; }
+    header h1 { font-size: 1.3rem; font-weight: 600; }
+    header p { font-size: 0.85rem; color: #888; margin-top: 2px; }
+    .filters { display: flex; flex-wrap: wrap; gap: 10px; padding: 1.25rem 1.5rem; background: #fff; border-bottom: 1px solid #e5e3dc; }
+    .filters input, .filters select {
+      font-size: 0.9rem; padding: 8px 12px; border: 1px solid #ddd;
+      border-radius: 8px; background: #faf9f7; color: #1a1a1a;
+      flex: 1; min-width: 150px; outline: none;
+    }
+    .filters input:focus, .filters select:focus { border-color: #aaa; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(270px, 1fr)); gap: 14px; padding: 1.5rem; }
+    .card {
+      background: #fff; border: 1px solid #e5e3dc; border-radius: 12px;
+      padding: 1.1rem 1.25rem; cursor: pointer; transition: border-color 0.15s, box-shadow 0.15s;
+    }
+    .card:hover { border-color: #bbb; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
+    .card-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 8px; margin-bottom: 5px; }
+    .card-title { font-size: 1rem; font-weight: 600; }
+    .badge-time { font-size: 0.75rem; padding: 3px 9px; border-radius: 20px; background: #e8f0fe; color: #1a56db; white-space: nowrap; }
+    .card-author { font-size: 0.8rem; color: #888; margin-bottom: 10px; }
+    .tags { display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 10px; }
+    .tag { font-size: 0.72rem; padding: 2px 8px; border-radius: 6px; background: #f0efeb; color: #555; border: 1px solid #e0ddd6; }
+    .ingr-preview { font-size: 0.82rem; color: #666; line-height: 1.5; }
+    .empty { text-align: center; color: #888; padding: 3rem; font-size: 0.9rem; }
+
+    /* Modal */
+    .overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.4); z-index: 100; padding: 1.5rem; overflow-y: auto; }
+    .overlay.active { display: flex; align-items: flex-start; justify-content: center; }
+    .modal {
+      background: #fff; border-radius: 14px; padding: 1.75rem;
+      width: 100%; max-width: 500px; margin: auto; position: relative;
+    }
+    .modal h2 { font-size: 1.2rem; font-weight: 600; margin-bottom: 4px; }
+    .modal-meta { font-size: 0.82rem; color: #888; margin-bottom: 1.25rem; }
+    .modal-close {
+      position: absolute; top: 1rem; right: 1rem;
+      font-size: 0.8rem; color: #888; cursor: pointer;
+      border: 1px solid #ddd; border-radius: 6px; padding: 3px 10px; background: none;
+    }
+    .modal-close:hover { background: #f5f4f0; }
+    .section-label { font-size: 0.72rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; color: #999; margin: 1rem 0 6px; }
+    .modal ul, .modal ol { padding-left: 1.3rem; font-size: 0.9rem; line-height: 1.85; color: #333; }
+
+    @media (max-width: 500px) {
+      .grid { padding: 1rem; }
+      .filters { padding: 1rem; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Nos recettes</h1>
+  <p>Collection personnelle</p>
+</header>
+
+<div class="filters">
+  <input type="text" id="searchIngr" placeholder="Ingrédient (ex: oeuf, riz…)" oninput="render()" />
+  <select id="filterTime" onchange="render()">
+    <option value="">Toute durée</option>
+    <option value="15">Moins de 15 min</option>
+    <option value="30">Moins de 30 min</option>
+    <option value="60">Moins de 60 min</option>
+  </select>
+  <select id="filterAuthor" onchange="render()">
+    <option value="">Tous les auteurs</option>
+  </select>
+</div>
+
+<div class="grid" id="grid"></div>
+
+<div class="overlay" id="overlay" onclick="handleOverlayClick(event)">
+  <div class="modal" id="modal"></div>
+</div>
+
+<script>
+let recettes = [];
+
+async function loadRecettes() {
+  try {
+    const res = await fetch('recettes.json');
+    recettes = await res.json();
+    populateAuthors();
+    render();
+  } catch(e) {
+    document.getElementById('grid').innerHTML = '<div class="empty">Impossible de charger les recettes.</div>';
+  }
+}
+
+function populateAuthors() {
+  const authors = [...new Set(recettes.map(r => r.auteur))];
+  const sel = document.getElementById('filterAuthor');
+  authors.forEach(a => {
+    const opt = document.createElement('option');
+    opt.value = a; opt.textContent = a;
+    sel.appendChild(opt);
+  });
+}
+
+function render() {
+  const ingr = document.getElementById('searchIngr').value.toLowerCase().trim();
+  const maxTime = parseInt(document.getElementById('filterTime').value) || Infinity;
+  const author = document.getElementById('filterAuthor').value;
+
+  const filtered = recettes.filter(r => {
+    if (ingr && !r.ingredients.some(i => i.toLowerCase().includes(ingr))) return false;
+    if (r.duree > maxTime) return false;
+    if (author && r.auteur !== author) return false;
+    return true;
+  });
+
+  const grid = document.getElementById('grid');
+  if (filtered.length === 0) {
+    grid.innerHTML = '<div class="empty">Aucune recette ne correspond aux filtres.</div>';
+    return;
+  }
+
+  grid.innerHTML = filtered.map(r => `
+    <div class="card" onclick="openModal(${r.id})">
+      <div class="card-top">
+        <span class="card-title">${r.titre}</span>
+        <span class="badge-time">${r.duree} min</span>
+      </div>
+      <div class="card-author">par ${r.auteur}</div>
+      <div class="tags">${r.tags.map(t => `<span class="tag">${t}</span>`).join('')}</div>
+      <div class="ingr-preview">${r.ingredients.slice(0, 4).join(', ')}${r.ingredients.length > 4 ? '…' : ''}</div>
+    </div>
+  `).join('');
+}
+
+function openModal(id) {
+  const r = recettes.find(x => x.id === id);
+  document.getElementById('modal').innerHTML = `
+    <button class="modal-close" onclick="closeModal()">fermer</button>
+    <h2>${r.titre}</h2>
+    <div class="modal-meta">par ${r.auteur} · ${r.duree} min · ${r.tags.join(', ')}</div>
+    <div class="section-label">Ingrédients</div>
+    <ul>${r.ingredients.map(i => `<li>${i}</li>`).join('')}</ul>
+    <div class="section-label">Ustensiles</div>
+    <ul>${r.ustensiles.map(u => `<li>${u}</li>`).join('')}</ul>
+    <div class="section-label">Préparation</div>
+    <ol>${r.etapes.map(e => `<li>${e}</li>`).join('')}</ol>
+  `;
+  document.getElementById('overlay').classList.add('active');
+}
+
+function closeModal() {
+  document.getElementById('overlay').classList.remove('active');
+}
+
+function handleOverlayClick(e) {
+  if (e.target === document.getElementById('overlay')) closeModal();
+}
+
+loadRecettes();
+</script>
+</body>
+</html>

@@ -76,7 +76,7 @@
     "duree": 60,
     "personnes": 2,
     "prix": 8,
-    "ingredients": ["patate", "carotte",
+    "ingredients": ["patate", "carotte"]
     "ustensiles": ["four"],
     "tags": [],
     "etapes": [
@@ -105,9 +105,9 @@
     "id": 7,
     "titre": "Riz crème champignons",
     "auteur": "Tristan",
-    "duree":30 ,
+    "duree":25 ,
     "personnes": 2,
-    "prix":10 ,
+    "prix":8 ,
     "ingredients": ["riz", "crème", "champignon"]
     "ustensiles": ["poele","casserole"],
     "tags": [],

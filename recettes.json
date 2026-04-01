@@ -2,9 +2,11 @@
   {
     "id": 1,
     "titre": "Risotto aux champignons",
-    "auteur": "Lucas",
-    "duree": 35,
-    "ingredients": ["riz arborio", "champignons", "parmesan", "oignon", "vin blanc", "bouillon"],
+    "auteur": "T&T",
+    "duree": 120,
+    "personnes": 2,
+    "prix": 30,
+    "ingredients": ["riz risotto", "champignons", "parmesan", "oignon", "vin blanc", "bouillon"],
     "ustensiles": ["casserole", "louche"],
     "tags": ["végétarien", "réconfortant"],
     "etapes": [
@@ -17,8 +19,8 @@
   },
   {
     "id": 2,
-    "titre": "Omelette au chèvre & herbes",
-    "auteur": "Théo",
+    "titre": "Crêpes",
+    "auteur": "Tristan",
     "duree": 10,
     "ingredients": ["oeufs", "chèvre", "ciboulette", "persil", "beurre"],
     "ustensiles": ["poêle", "fouet"],

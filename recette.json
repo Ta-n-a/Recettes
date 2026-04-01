@@ -1,0 +1,33 @@
+[
+  {
+    "id": 1,
+    "titre": "Risotto aux champignons",
+    "auteur": "Lucas",
+    "duree": 35,
+    "ingredients": ["riz arborio", "champignons", "parmesan", "oignon", "vin blanc", "bouillon"],
+    "ustensiles": ["casserole", "louche"],
+    "tags": ["végétarien", "réconfortant"],
+    "etapes": [
+      "Faire revenir l'oignon dans du beurre.",
+      "Ajouter le riz et nacrer 2 min.",
+      "Déglacer au vin blanc.",
+      "Ajouter le bouillon louche par louche.",
+      "Incorporer champignons et parmesan."
+    ]
+  },
+  {
+    "id": 2,
+    "titre": "Omelette au chèvre & herbes",
+    "auteur": "Théo",
+    "duree": 10,
+    "ingredients": ["oeufs", "chèvre", "ciboulette", "persil", "beurre"],
+    "ustensiles": ["poêle", "fouet"],
+    "tags": ["rapide", "végétarien"],
+    "etapes": [
+      "Battre les oeufs avec les herbes.",
+      "Faire fondre le beurre dans la poêle.",
+      "Verser les oeufs, remuer doucement.",
+      "Déposer le chèvre avant de plier."
+    ]
+  }
+]

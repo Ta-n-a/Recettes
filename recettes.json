@@ -91,7 +91,7 @@
     "duree":60 ,
     "personnes": 6,
     "prix":3000 ,
-    "ingredients": ["1L de lait", "farine", "beurre", "lasagnes", "3 gros pots de sauce tomates", "fromage rapé","muscade"]
+    "ingredients": ["1L de lait", "farine", "beurre", "lasagnes", "3 gros pots de sauce tomates", "fromage rapé","muscade"],
     "ustensiles": ["four"],
     "tags": [],
     "etapes": [
@@ -108,8 +108,23 @@
     "duree":25 ,
     "personnes": 2,
     "prix":8 ,
-    "ingredients": ["riz", "crème", "champignon"]
+    "ingredients": ["riz", "crème", "champignon"],
     "ustensiles": ["poele","casserole"],
+    "tags": [],
+    "etapes": [
+      "cuire le riz",
+      "faire revenir les champignons"
+    ]
+ },
+  {
+    "id": 8,
+    "titre": "Patates sautées",
+    "auteur": "Tristan",
+    "duree":120 ,
+    "personnes": 2,
+    "prix":3 ,
+    "ingredients": ["patates", "GRAS"],
+    "ustensiles": ["poele"],
     "tags": [],
     "etapes": [
       "cuire le riz",

@@ -19,10 +19,19 @@
     .filters input:focus, .filters select:focus { border-color: #aaa; }
     .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(270px, 1fr)); gap: 14px; padding: 1.5rem; }
     .card {
-      background: #fff; border: 1px solid #e5e3dc; border-radius: 12px;
-      padding: 1.1rem 1.25rem; cursor: pointer; transition: border-color 0.15s, box-shadow 0.15s;
-    }
-    .card:hover { border-color: #bbb; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
+  background: #fff;
+  border: 1px solid #e5e3dc;
+  border-radius: 14px;
+  padding: 1.2rem 1.3rem;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  border-color: #bbb;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
     .card-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 8px; margin-bottom: 5px; }
     .card-title { font-size: 1rem; font-weight: 600; }
     .badge-time { font-size: 0.75rem; padding: 3px 9px; border-radius: 20px; background: #e8f0fe; color: #1a56db; white-space: nowrap; }
@@ -36,9 +45,15 @@
     .overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.4); z-index: 100; padding: 1.5rem; overflow-y: auto; }
     .overlay.active { display: flex; align-items: flex-start; justify-content: center; }
     .modal {
-      background: #fff; border-radius: 14px; padding: 1.75rem;
-      width: 100%; max-width: 500px; margin: auto; position: relative;
-    }
+  background: #fff;
+  border-radius: 16px;
+  padding: 2rem;
+  width: 100%;
+  max-width: 520px;
+  margin: auto;
+  position: relative;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
     .modal h2 { font-size: 1.2rem; font-weight: 600; margin-bottom: 4px; }
     .modal-meta { font-size: 0.82rem; color: #888; margin-bottom: 1.25rem; }
     .modal-close {

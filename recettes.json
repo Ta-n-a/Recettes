@@ -57,7 +57,7 @@
     "duree": 30,
     "personnes": 2,
     "prix": 20,
-    "ingredients": ["lentilles corail", "lait de coco", "épinard","riz","curry en poudre","curcuma","paprika",],
+    "ingredients": ["lentilles corail", "lait de coco", "épinard","riz","curry en poudre","curcuma","paprika","ail","oignon"],
     "ustensiles": ["mixeur", "bol"],
     "tags": [],
     "etapes": [

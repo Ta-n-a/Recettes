@@ -68,5 +68,52 @@
       "ajouter les épinard et les faire fondre pas longtemps",
       "ajouter les noix de cajou en option"
     ]
+  },
+  {
+    "id": 5,
+    "titre": "Patate carotte au four",
+    "auteur": "Tatiana",
+    "duree": 60,
+    "personnes": 2,
+    "prix": 8,
+    "ingredients": ["patate", "carotte",
+    "ustensiles": ["four"],
+    "tags": [],
+    "etapes": [
+      "couper",
+      "huile+sel+poivre+herbes"
+    ]
+  },
+  {
+    "id": 6,
+    "titre": "Lasagnes",
+    "auteur": "Tristan",
+    "duree":60 ,
+    "personnes": 6,
+    "prix":3000 ,
+    "ingredients": ["1L de lait", "farine", "beurre", "lasagnes", "3 gros pots de sauce tomates", "fromage rapé","muscade"]
+    "ustensiles": ["four"],
+    "tags": [],
+    "etapes": [
+      "faire la bechamel",
+      "melanger sauce tomate et béchamel",
+      "empiler"
+    ]
+  
+  },
+  {
+    "id": 7,
+    "titre": "Riz crème champignons",
+    "auteur": "Tristan",
+    "duree":30 ,
+    "personnes": 2,
+    "prix":10 ,
+    "ingredients": ["riz", "crème", "champignon"]
+    "ustensiles": ["poele","casserole"],
+    "tags": [],
+    "etapes": [
+      "cuire le riz",
+      "faire revenir les champignons"
+    ]
   }
 ]

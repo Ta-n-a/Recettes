@@ -172,6 +172,23 @@
       background: #f0f0f0;
       color: #444;
     }
+    /* Ingrédients */
+.ingredients {
+  border: 1px solid #c8e6c9;
+  background: #f1f8f4;
+}
+
+/* Ustensiles */
+.ustensiles-section {
+  border: 1px solid #bbdefb;
+  background: #eef6fd;
+}
+
+/* Préparation */
+.preparation {
+  border: 1px solid #ffe082;
+  background: #fff8e1;
+}
 
     .modal-close {
       position: absolute;
@@ -379,20 +396,27 @@ function openModal(id) {
     </div>
     <div class="modal-durees">${prepStr}${cuisStr}</div>
     <div class="section">
+  <div class="section ingredients">
   <div class="section-label">Ingrédients</div>
-  <ul>${r.ingredients.map(i => `<li>${i.nom || i}</li>`).join('')}</ul>
+  <ul>
+    ${r.ingredients.map(i => `<li>${i.nom || i}</li>`).join('')}
+  </ul>
 </div>
 
-<div class="section">
+<div class="section ustensiles-section">
   <div class="section-label">Ustensiles</div>
-  <ul class="ustensiles">${r.ustensiles.map(u => `<li>${u}</li>`).join('')}</ul>
+  <ul class="ustensiles">
+    ${r.ustensiles.map(u => `<li>${u}</li>`).join('')}
+  </ul>
 </div>
 
-<div class="section">
+<div class="section preparation">
   <div class="section-label">Préparation</div>
-  <ol>${r.etapes.map(e => `<li>${e}</li>`).join('')}</ol>
+  <ol>
+    ${r.etapes.map(e => `<li>${e}</li>`).join('')}
+  </ol>
 </div>
-  `;
+`;
   document.getElementById('overlay').classList.add('active');
 }
 

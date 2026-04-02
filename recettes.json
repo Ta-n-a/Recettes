@@ -64,7 +64,7 @@
     "statut": "validée",
     "personnes": 2,
     "prix": 20,
-    "ingredients": [{ "nom": "lentilles corail", "optionnel": false },{ "nom": "lait de coco", "optionnel": false },{ "nom": "épinard", "optionnel": false },{ "nom": "riz", "optionnel": false },{ "nom": "curry en poudre", "optionnel": false },{ "nom": "curcuma", "optionnel": false },{ "nom": "paprika", "optionnel": false },{ "nom": "ail", "optionnel": false },{ "nom": "oignon", "optionnel": false },{ "nom": "concentré de tomate", "optionnel": false }],
+    "ingredients": [{ "nom": "lentilles corail", "optionnel": false },{ "nom": "lait de coco", "optionnel": false },{ "nom": "épinard", "optionnel": false },{ "nom": "riz", "optionnel": false },{ "nom": "curry en poudre", "optionnel": false },{ "nom": "curcuma", "optionnel": false },{ "nom": "paprika", "optionnel": false },{ "nom": "ail", "optionnel": false },{ "nom": "oignon", "optionnel": false },{ "nom": "concentré de tomate", "optionnel": false },{ "nom": "noix de cajou", "optionnel": true }],
     "ustensiles": ["casserole", "poele"],
     "tags": [],
     "etapes": [
@@ -73,8 +73,7 @@
       "ajouter les lentilles avec de l'eau",
       "ajouter les épices et concentré de tomate",
       "ajouter le lait de coco",
-      "ajouter les épinard et les faire fondre pas longtemps",
-      "ajouter les noix de cajou en option"
+      "ajouter les épinard et les faire fondre pas longtemps"
     ]
   },
   {

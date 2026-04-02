@@ -122,6 +122,14 @@
       border-radius: 8px;
       padding: 3px 8px;
     }
+    .ustensiles {
+  list-style: none;
+  padding-left: 0;
+}
+
+.ustensiles li::before {
+  content: "- ";
+}
 
     .card-author { font-size: 0.8rem; color: #888; margin-bottom: 8px; }
 
@@ -229,7 +237,7 @@
 
 <header>
   <h1>🍝 Nos recettes</h1>
-  <p>Collection personnelle</p>
+  <p>T&T</p>
 </header>
 
 <div class="filters">
@@ -366,7 +374,7 @@ function openModal(id) {
     <div class="section-label">Ingrédients</div>
     <ul class="ingr-list">${ingrHTML}</ul>
     <div class="section-label">Ustensiles</div>
-    <ul>${r.ustensiles.map(u => `<li>${u}</li>`).join('')}</ul>
+    <ul class="ustensiles">${r.ustensiles.map(u => `<li>${u}</li>`).join('')}</ul>
     <div class="section-label">Préparation</div>
     <ol>${r.etapes.map(e => `<li>${e}</li>`).join('')}</ol>
   `;

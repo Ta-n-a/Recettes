@@ -5,7 +5,7 @@
     "auteur": "T&T",
     "duree_prep": 120,
     "duree_cuisson": 120,
-    "statut": "validée"
+    "statut": "validée",
     "personnes": 2,
     "prix": 3000,
     "ingredients": [{ "nom": "riz risotto", "optionnel": false },{ "nom": "600g champignons", "optionnel": false } , { "nom": "parmesan", "optionnel": false },{ "nom": "échalotte", "optionnel": false } , { "nom": "vin blanc", "optionnel": false }, { "nom": "bouillon cube", "optionnel": false }],
@@ -26,7 +26,7 @@
     "auteur": "Tristan",
     "duree_prep": 120,
     "duree_cuisson": 120,
-    "statut": "validée"
+    "statut": "validée",
     "personnes": 4,
     "prix": 30000,
     "ingredients": [{ "nom": "5 oeufs", "optionnel": false },{ "nom": "1L lait", "optionnel": false },{ "nom":"500g farine", "optionnel": false } ,{ "nom": "beurre", "optionnel": false } , { "nom": "sucre", "optionnel": false }],
@@ -44,7 +44,7 @@
     "auteur": "Tatiana",
     "duree_prep": 120,
     "duree_cuisson": 120,
-    "statut": "validée"
+    "statut": "validée",
     "personnes": 2,
     "prix": 5,
     "ingredients": [{ "nom": "betterave", "optionnel": false }, { "nom": "1 feta", "optionnel": false }, { "nom": "pain", "optionnel": false }],
@@ -61,7 +61,7 @@
     "auteur": "Tatiana",
     "duree_prep": 120,
     "duree_cuisson": 120,
-    "statut": "validée"
+    "statut": "validée",
     "personnes": 2,
     "prix": 20,
     "ingredients": [{ "nom": "lentilles corail", "optionnel": false },{ "nom": "lait de coco", "optionnel": false },{ "nom": "épinard", "optionnel": false },{ "nom": "riz", "optionnel": false },{ "nom": "curry en poudre", "optionnel": false },{ "nom": "curcuma", "optionnel": false },{ "nom": "paprika", "optionnel": false },{ "nom": "ail", "optionnel": false },{ "nom": "oignon", "optionnel": false },{ "nom": "concentré de tomate", "optionnel": false }],
@@ -83,10 +83,10 @@
     "auteur": "Tatiana",
     "duree_prep": 120,
     "duree_cuisson": 120,
-    "statut": "validée"
+    "statut": "validée",
     "personnes": 2,
     "prix": 8,
-    "ingredients": [{ "nom": "patates", "optionnel": false }, { "nom": "carottes", "optionnel": false },],
+    "ingredients": [{ "nom": "patates", "optionnel": false }, { "nom": "carottes", "optionnel": false }],
     "ustensiles": ["four"],
     "tags": [],
     "etapes": [
@@ -100,7 +100,7 @@
     "auteur": "Tristan",
     "duree_prep": 120,
     "duree_cuisson": 120,
-    "statut": "validée"
+    "statut": "validée",
     "personnes": 6,
     "prix":3000 ,
     "ingredients": [{ "nom": "1L de lait", "optionnel": false },{ "nom": "farine", "optionnel": false },{ "nom": "beurre", "optionnel": false },{ "nom": "lasagnes", "optionnel": false },{ "nom": "3 gros pots de sauce tomates", "optionnel": false },{ "nom": "fromage rapé", "optionnel": false },{ "nom": "muscade", "optionnel": true }],
@@ -119,7 +119,7 @@
     "auteur": "Tristan",
     "duree_prep": 120,
     "duree_cuisson": 120,
-    "statut": "validée"
+    "statut": "validée",
     "personnes": 2,
     "prix":8 ,
     "ingredients": [
@@ -139,8 +139,8 @@
     "auteur": "Tristan",
     "duree_prep": 120,
     "duree_cuisson": 120,
+     "statut": "validée",
     "personnes": 2,
-    "statut": "validée"
     "prix":3 ,
     "ingredients": [{ "nom": "patates", "optionnel": false },{ "nom": "GRAS", "optionnel": false }],
     "ustensiles": ["poele"],

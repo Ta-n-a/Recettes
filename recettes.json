@@ -3,10 +3,12 @@
     "id": 1,
     "titre": "Risotto aux champignons",
     "auteur": "T&T",
-    "duree": 120,
+    "duree_prep": 120,
+    "duree_cuisson": 120,
+    "statut": "validée"
     "personnes": 2,
     "prix": 3000,
-    "ingredients": ["riz risotto", "600g champignons", "parmesan", "échalotte", "vin blanc", "bouillon cube"],
+    "ingredients": [{ "nom": "riz risotto", "optionnel": false },{ "nom": "600g champignons", "optionnel": false } , { "nom": "parmesan", "optionnel": false },{ "nom": "échalotte", "optionnel": false } , { "nom": "vin blanc", "optionnel": false }, { "nom": "bouillon cube", "optionnel": false }],
     "ustensiles": ["poêle"],
     "tags": [],
     "etapes": [
@@ -22,10 +24,12 @@
     "id": 2,
     "titre": "Crêpes",
     "auteur": "Tristan",
-    "duree": 100,
+    "duree_prep": 120,
+    "duree_cuisson": 120,
+    "statut": "validée"
     "personnes": 4,
     "prix": 30000,
-    "ingredients": ["5 oeufs", "1L lait", "500g farine", "beurre", "sucre"],
+    "ingredients": [{ "nom": "5 oeufs", "optionnel": false },{ "nom": "1L lait", "optionnel": false },{ "nom":"500g farine", "optionnel": false } ,{ "nom": "beurre", "optionnel": false } , { "nom": "sucre", "optionnel": false }],
     "ustensiles": ["poêle", "fouet électrique","grand saladier"],
     "tags": ["gouter"],
     "etapes": [
@@ -38,10 +42,12 @@
     "id": 3,
     "titre": "Betterave feta",
     "auteur": "Tatiana",
-    "duree": 5,
+    "duree_prep": 120,
+    "duree_cuisson": 120,
+    "statut": "validée"
     "personnes": 2,
     "prix": 5,
-    "ingredients": ["1 betterave", "1 feta", "pain"],
+    "ingredients": [{ "nom": "betterave", "optionnel": false }, { "nom": "1 feta", "optionnel": false }, { "nom": "pain", "optionnel": false }],
     "ustensiles": ["mixeur", "bol"],
     "tags": [],
     "etapes": [
@@ -53,10 +59,12 @@
     "id": 4,
     "titre": "Dahl lentille corail",
     "auteur": "Tatiana",
-    "duree": 30,
+    "duree_prep": 120,
+    "duree_cuisson": 120,
+    "statut": "validée"
     "personnes": 2,
     "prix": 20,
-    "ingredients": ["lentilles corail", "lait de coco", "épinard","riz","curry en poudre","curcuma","paprika","ail","oignon","concentré de tomate"],
+    "ingredients": [{ "nom": "lentilles corail", "optionnel": false },{ "nom": "lait de coco", "optionnel": false },{ "nom": "épinard", "optionnel": false },{ "nom": "riz", "optionnel": false },{ "nom": "curry en poudre", "optionnel": false },{ "nom": "curcuma", "optionnel": false },{ "nom": "paprika", "optionnel": false },{ "nom": "ail", "optionnel": false },{ "nom": "oignon", "optionnel": false },{ "nom": "concentré de tomate", "optionnel": false }],
     "ustensiles": ["casserole", "poele"],
     "tags": [],
     "etapes": [
@@ -73,10 +81,12 @@
     "id": 5,
     "titre": "Patate carotte au four",
     "auteur": "Tatiana",
-    "duree": 60,
+    "duree_prep": 120,
+    "duree_cuisson": 120,
+    "statut": "validée"
     "personnes": 2,
     "prix": 8,
-    "ingredients": ["patate", "carotte"],
+    "ingredients": [{ "nom": "patates", "optionnel": false }, { "nom": "carottes", "optionnel": false },],
     "ustensiles": ["four"],
     "tags": [],
     "etapes": [
@@ -88,10 +98,12 @@
     "id": 6,
     "titre": "Lasagnes",
     "auteur": "Tristan",
-    "duree":60 ,
+    "duree_prep": 120,
+    "duree_cuisson": 120,
+    "statut": "validée"
     "personnes": 6,
     "prix":3000 ,
-    "ingredients": ["1L de lait", "farine", "beurre", "lasagnes", "3 gros pots de sauce tomates", "fromage rapé","muscade"],
+    "ingredients": [{ "nom": "1L de lait", "optionnel": false },{ "nom": "farine", "optionnel": false },{ "nom": "beurre", "optionnel": false },{ "nom": "lasagnes", "optionnel": false },{ "nom": "3 gros pots de sauce tomates", "optionnel": false },{ "nom": "fromage rapé", "optionnel": false },{ "nom": "muscade", "optionnel": true }],
     "ustensiles": ["four"],
     "tags": [],
     "etapes": [
@@ -105,10 +117,15 @@
     "id": 7,
     "titre": "Riz crème champignons",
     "auteur": "Tristan",
-    "duree":25 ,
+    "duree_prep": 120,
+    "duree_cuisson": 120,
+    "statut": "validée"
     "personnes": 2,
     "prix":8 ,
-    "ingredients": ["riz", "crème", "champignon"],
+    "ingredients": [
+  { "nom": "rizo", "optionnel": false },
+  { "nom": "crème fraiche", "optionnel": false },{ "nom": "champignons", "optionnel": false }
+],
     "ustensiles": ["poele","casserole"],
     "tags": [],
     "etapes": [
@@ -120,10 +137,12 @@
     "id": 8,
     "titre": "Patates sautées",
     "auteur": "Tristan",
-    "duree":120 ,
+    "duree_prep": 120,
+    "duree_cuisson": 120,
     "personnes": 2,
+    "statut": "validée"
     "prix":3 ,
-    "ingredients": ["patates", "GRAS"],
+    "ingredients": [{ "nom": "patates", "optionnel": false },{ "nom": "GRAS", "optionnel": false }],
     "ustensiles": ["poele"],
     "tags": [],
     "etapes": [

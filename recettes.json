@@ -31,7 +31,7 @@
     "prix": 30000,
     "ingredients": [{ "nom": "5 oeufs", "optionnel": false },{ "nom": "1L lait", "optionnel": false },{ "nom":"500g farine", "optionnel": false } ,{ "nom": "beurre", "optionnel": false } , { "nom": "sucre", "optionnel": false }],
     "ustensiles": ["poêle", "fouet électrique","grand saladier"],
-    "tags": ["gouter"],
+    "tags": ["Gouter"],
     "etapes": [
       "Farine+sel+sucre",
       "Ajouter oeufs puis beurre",

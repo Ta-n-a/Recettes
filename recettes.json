@@ -148,5 +148,23 @@
       "cuire le riz",
       "faire revenir les champignons"
     ]
+  },
+  {
+    "id": 9,
+    "titre": "Cookies",
+    "auteur": "Tristan",
+    "duree_prep": 20,
+    "duree_cuisson": 15,
+     "statut": "validée",
+    "personnes": 2,
+    "prix":30000 ,
+    "ingredients": [{ "nom": "140g beurre", "optionnel": false },{ "nom": "100g vergeoise", "optionnel": false },{ "nom": "100g sucre", "optionnel": false },{ "nom": "1 oeuf", "optionnel": false },{ "nom": "240g farine", "optionnel": false },{ "nom": "1/2 sachet levure", "optionnel": false },{ "nom": "280g chocolat", "optionnel": false },{ "nom": "vanille", "optionnel": true }],
+    "ustensiles": ["poele"],
+    "tags": [],
+    "etapes": [
+      "tout mélanger",
+      "laisser reposer la pâte 24h",
+      "cuire à 180"
+    ]
   }
 ]

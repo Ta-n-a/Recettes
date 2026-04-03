@@ -367,8 +367,7 @@ function render() {
           <span class="badge-statut ${badgeClass}">${badgeLabel}</span>
         </div>
         <div class="duree-row">${prepStr}${cuisStr}</div>
-        <div class="card-author">par ${r.auteur}</div>
-        <div class="card-price">${r.prix} €</div>
+        <div class="card-author">par ${r.auteur} · 💰 ${r.prix} €</div>
         <div class="tags">${r.tags.map(t => `<span class="tag">${t}</span>`).join('')}</div>
         <div class="ingr-preview">${ingrPreview}</div>
       </div>
@@ -395,9 +394,9 @@ function openModal(id) {
     <button class="modal-close" onclick="closeModal()">fermer</button>
     <h2>${r.titre}</h2>
     <div class="modal-meta">
-      par ${r.auteur} &nbsp;·&nbsp; <span class="badge-statut ${badgeClass}">${badgeLabel}</span><br>
-      <span style="margin-top:4px; display:inline-block;">${r.tags.join(', ')}</span>
-    </div>
+  par ${r.auteur} &nbsp;·&nbsp; <span class="badge-statut ${badgeClass}">${badgeLabel}</span> &nbsp;·&nbsp; 💰 ${r.prix} €<br>
+  <span style="margin-top:4px; display:inline-block;">${r.tags.join(', ')}</span>
+</div>
     <div class="modal-durees">${prepStr}${cuisStr}</div>
   <div class="section ingredients">
   <div class="section-label">Ingrédients</div>

@@ -166,5 +166,37 @@
       "laisser reposer la pâte 24h",
       "cuire à 180"
     ]
+  },
+  {
+    "id": 10,
+    "titre": "Pates arabiata epinard champignons",
+    "auteur": "Tristan",
+    "duree_prep": 5,
+    "duree_cuisson": 20,
+     "statut": "A tester",
+    "personnes": 2,
+    "prix":30000 ,
+    "ingredients": [{ "nom": "champignon", "optionnel": false },{ "nom": "feuille epinard", "optionnel": false },{ "nom": "arabiata", "optionnel": false },{ "nom": "pâtes", "optionnel": false },{ "nom": "parmesan", "optionnel": true }],
+    "ustensiles": ["casserole"],
+    "tags": [],
+    "etapes": [
+      "couper champignon et les utiliser cru"
+    ]
+  },
+  {
+    "id": 10,
+    "titre": "Moussaka",
+    "auteur": "Tristan",
+    "duree_prep": 5,
+    "duree_cuisson": 20,
+     "statut": "A revalider",
+    "personnes": 2,
+    "prix":30000 ,
+    "ingredients": [{ "nom": "champignon aubergines", "optionnel": false },{ "nom": "5 tomates", "optionnel": false },{ "nom": "1 oignon", "optionnel": false },{ "nom": "beurre", "optionnel": false },{ "nom": "500g viande hachée", "optionnel": false },{ "nom": "6 patates", "optionnel": false },{ "nom": "miel", "optionnel": true }],
+    "ustensiles": ["poele"],
+    "tags": [],
+    "etapes": [
+
+    ]
   }
 ]

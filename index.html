@@ -96,6 +96,11 @@
       margin-bottom: 6px;
       gap: 8px;
     }
+    .card-price {
+  font-size: 0.85rem;
+  color: #444;
+  margin-bottom: 6px;
+}
 
     .card-title { font-size: 1rem; font-weight: 600; }
 
@@ -363,6 +368,7 @@ function render() {
         </div>
         <div class="duree-row">${prepStr}${cuisStr}</div>
         <div class="card-author">par ${r.auteur}</div>
+        <div class="card-price">${r.prix} €</div>
         <div class="tags">${r.tags.map(t => `<span class="tag">${t}</span>`).join('')}</div>
         <div class="ingr-preview">${ingrPreview}</div>
       </div>
